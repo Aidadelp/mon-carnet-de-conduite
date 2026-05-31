@@ -1,17 +1,115 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Mon carnet de conduite</title>
-<link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mon carnet de conduite</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <script src="donnees.js" defer></script>
+    <script src="script.js" defer></script>
 </head>
 
 <body>
 
-<h1>Mon carnet de conduite</h1>
+    <header class="hero">
+        <h1>Mon carnet de conduite</h1>
 
-<p>Aida Delpasand</p>
+        <p>
+            Application de suivi des expériences de conduite accompagnée
+        </p>
+
+        <p class="student">
+            Aida Delpasand
+        </p>
+    </header>
+
+    <main class="container">
+
+        <section class="card">
+
+            <h2>Nouvelle expérience</h2>
+
+            <form id="formConduite">
+
+                <label for="dateExperience">Date</label>
+                <input type="date" id="dateExperience" required>
+
+                <label for="heureDepart">Heure de départ</label>
+                <input type="time" id="heureDepart" required>
+
+                <label for="heureArrivee">Heure d'arrivée</label>
+                <input type="time" id="heureArrivee" required>
+
+                <label for="kilometres">Kilomètres parcourus</label>
+                <input type="number" id="kilometres" min="0.1" step="0.1" required>
+
+                <label for="idMeteo">Météo</label>
+                <select id="idMeteo" required>
+                    <option value="">Choisir</option>
+                </select>
+
+                <label for="idTrafic">Trafic</label>
+                <select id="idTrafic" required>
+                    <option value="">Choisir</option>
+                </select>
+
+                <label for="idRoute">Type de route</label>
+                <select id="idRoute" required>
+                    <option value="">Choisir</option>
+                </select>
+
+                <label for="idMoment">Moment de la journée</label>
+                <select id="idMoment" required>
+                    <option value="">Choisir</option>
+                </select>
+
+                <label for="idCompetence">Compétence travaillée</label>
+                <select id="idCompetence" required>
+                    <option value="">Choisir</option>
+                </select>
+
+                <label for="idDifficulte">Difficulté ressentie</label>
+                <select id="idDifficulte" required>
+                    <option value="">Choisir</option>
+                </select>
+
+                <label for="commentaire">Commentaire</label>
+                <textarea id="commentaire" rows="4" placeholder="Exemple : rond-point, créneau, conduite en ville..."></textarea>
+
+                <button type="button" id="btnEnregistrer">
+                    Enregistrer l'expérience
+                </button>
+
+            </form>
+
+        </section>
+
+        <section class="card">
+
+            <h2>Bilan rapide</h2>
+
+            <p>
+                Nombre d'expériences :
+                <span id="nombreExperiences">0</span>
+            </p>
+
+            <p>
+                Distance totale :
+                <span id="distanceTotale">0</span>
+                km
+            </p>
+
+            <a href="dashboard.html">
+                Voir le dashboard
+            </a>
+
+        </section>
+
+    </main>
 
 </body>
+
 </html>
