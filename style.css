@@ -1,0 +1,191 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background: #fff5fb;
+    color: #221122;
+}
+
+.hero {
+    background: linear-gradient(135deg, #000000, #7b2cbf, #ff4fa3);
+    color: white;
+    text-align: center;
+    padding: 45px 20px;
+}
+
+.hero h1 {
+    margin: 0;
+    font-size: 36px;
+}
+
+.hero p {
+    margin: 10px 0 0;
+}
+
+.student {
+    font-weight: bold;
+}
+
+.container {
+    width: 92%;
+    max-width: 1100px;
+    margin: 25px auto;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 20px;
+}
+
+.card {
+    background: white;
+    padding: 22px;
+    border-radius: 18px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
+}
+
+.card h2 {
+    color: #7b2cbf;
+    margin-top: 0;
+}
+
+form {
+    display: grid;
+    gap: 12px;
+}
+
+label {
+    font-weight: bold;
+}
+
+input,
+select,
+textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #e8b7dd;
+    border-radius: 12px;
+    font-size: 16px;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    outline: 3px solid #ffd1ec;
+    border-color: #ff4fa3;
+}
+
+button,
+a {
+    display: inline-block;
+    background: linear-gradient(135deg, #7b2cbf, #ff4fa3);
+    color: white;
+    padding: 12px 18px;
+    border: none;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: bold;
+    cursor: pointer;
+    text-align: center;
+}
+
+button:hover,
+a:hover {
+    opacity: 0.9;
+}
+
+#nombreExperiences,
+#distanceTotale,
+#dashNombre,
+#dashDistance,
+#dashMoyenne {
+    color: #ff4fa3;
+    font-weight: bold;
+    font-size: 24px;
+}
+
+.dashboard {
+    grid-template-columns: 1fr 1fr;
+}
+
+.full {
+    grid-column: 1 / -1;
+}
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+}
+
+.stat-box {
+    background: #fff0fa;
+    border: 1px solid #f3b6e0;
+    padding: 18px;
+    border-radius: 15px;
+    text-align: center;
+}
+
+.stats-list p {
+    background: #fff0fa;
+    border: 1px solid #f3b6e0;
+    padding: 12px;
+    border-radius: 12px;
+}
+
+.table-wrapper {
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    min-width: 1000px;
+    border-collapse: collapse;
+}
+
+th,
+td {
+    padding: 10px;
+    border-bottom: 1px solid #f3b6e0;
+    text-align: left;
+}
+
+th {
+    background: #221122;
+    color: white;
+}
+
+canvas {
+    width: 100%;
+    max-width: 100%;
+    border: 1px solid #f3b6e0;
+    border-radius: 15px;
+    background: white;
+}
+
+.danger {
+    background: #111111;
+    margin-top: 15px;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    color: #555;
+}
+
+@media (max-width: 800px) {
+    .container,
+    .dashboard {
+        grid-template-columns: 1fr;
+    }
+
+    .stats-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .hero h1 {
+        font-size: 28px;
+    }
+}
