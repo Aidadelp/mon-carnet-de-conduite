@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - Mon carnet de conduite</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <script src="donnees.js" defer></script>
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+
+    <header class="hero">
+
+        <h1>Mon carnet de conduite</h1>
+
+        <p>
+            Tableau récapitulatif des expériences de conduite
+        </p>
+
+        <p class="student">
+            Aida Delpasand
+        </p>
+
+    </header>
+
+    <main class="container dashboard">
+
+        <section class="card full">
+
+            <h2>Statistiques générales</h2>
+
+            <div class="stats-grid">
+
+                <div class="stat-box">
+                    <span id="dashNombre">0</span>
+                    <p>Expériences</p>
+                </div>
+
+                <div class="stat-box">
+                    <span id="dashDistance">0</span>
+                    <p>Km parcourus</p>
+                </div>
+
+                <div class="stat-box">
+                    <span id="dashMoyenne">0</span>
+                    <p>Moyenne</p>
+                </div>
+
+            </div>
+
+            <a href="index.html">
+                Retour au formulaire
+            </a>
+
+        </section>
+
+        <section class="card">
+
+            <h2>Statistiques météo</h2>
+
+            <div id="statsMeteo"></div>
+
+        </section>
+
+        <section class="card">
+
+            <h2>Statistiques route</h2>
+
+            <div id="statsRoute"></div>
+
+        </section>
+
+        <section class="card full">
+
+            <h2>Graphique des kilomètres</h2>
+
+            <canvas
+                id="graphDistance"
+                width="900"
+                height="350">
+            </canvas>
+
+        </section>
+
+        <section class="card full">
+
+            <h2>Expériences enregistrées</h2>
+
+            <div class="table-wrapper">
+
+                <table>
+
+                    <thead>
+
+                        <tr>
+                            <th>ID</th>
+                            <th>Date</th>
+                            <th>Départ</th>
+                            <th>Arrivée</th>
+                            <th>Km</th>
+                            <th>Météo</th>
+                            <th>Trafic</th>
+                            <th>Route</th>
+                        </tr>
+
+                    </thead>
+
+                    <tbody id="tableExperiences">
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </section>
+
+    </main>
+
+</body>
+
+</html>
